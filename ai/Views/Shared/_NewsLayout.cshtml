@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNetCore.Html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>@ViewData["Title"] - AkkuApps AI News</title>
+    <link rel="stylesheet" href="~/css/news-magazine.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-auto">
+    <div class="app-wrapper">
+        <!-- Top bar: minimal, no heavy padding -->
+        <header class="top-bar">
+            <div class="logo-area">
+                <a href="/" class="logo">Akku<span>AI</span> News</a>
+            </div>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="icon-btn" aria-label="Dark/Light mode">🌓</button>
+            </div>
+        </header>
+
+        <!-- Main grid: full width, content-dense -->
+        <main class="magazine-grid">
+            @RenderBody()
+        </main>
+
+        <!-- optional footer – very compact -->
+        <footer class="site-footer">
+            <p>© @DateTime.Now.Year AkkuApps — AI‑powered news stream</p>
+        </footer>
+    </div>
+
+    <script src="~/js/news-magazine.js" defer></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

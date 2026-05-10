@@ -1,8 +1,43 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using ai.Models
+@model IEnumerable<NewsArticle>
+
+@{
+    Layout = "_NewsLayout";
+    ViewData["Title"] = "AI News - AkkuApps";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (Model != null && Model.Any())
+{
+    var first = Model.First();
+    <!-- Featured card (spans 2 columns) -->
+    <div class="news-card featured">
+        @if (!string.IsNullOrEmpty(first.ImageUrl))
+        {
+            <img class="card-image" src="@first.ImageUrl" alt="@first.Title" loading="lazy" />
+        }
+        <div class="news-meta">
+            <span>@first.PublishDate.ToString("MMM dd")</span>
+            <span class="ai-badge">AI analysis</span>
+        </div>
+        <h3><a href="@first.Url">@first.Title</a></h3>
+        <div class="news-summary">@first.Summary</div>
+    </div>
+
+    <!-- Rest of the cards -->
+    @foreach (var article in Model.Skip(1))
+    {
+        <div class="news-card">
+            <div class="news-meta">
+                <span>@article.PublishDate.ToString("MMM dd")</span>
+            </div>
+            <h3><a href="@article.Url">@article.Title</a></h3>
+            <div class="news-summary">@article.Summary</div>
+        </div>
+    }
+}
+else
+{
+    <div class="news-card" style="grid-column:1/-1; text-align:center;">
+        <p>Loading fresh AI news...</p>
+    </div>
+}
