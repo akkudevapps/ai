@@ -5,7 +5,7 @@
     Layout = "_NewsLayout";
     ViewData["Title"] = "AI News - AkkuApps";
 }
-
+<a asp-controller="Home" asp-action="AkkuChatbot" class="btn btn-primary"><br>Akku Chatbot</a>
 @if (Model != null && Model.Any())
 {
     var first = Model.First();
@@ -39,5 +39,6 @@ else
 {
     <div class="news-card" style="grid-column:1/-1; text-align:center;">
         <p>Loading fresh AI news...</p>
+        <a asp-controller="Home" asp-action="AkkuChatbot" class="btn btn-primary"><br>Akku Chatbot</a>
     </div>
 }

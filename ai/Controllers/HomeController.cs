@@ -13,7 +13,11 @@ namespace ai.Controllers
             _logger = logger;
         }
 
-        
+
+        public IActionResult AkkuChatbot()
+        {
+            return View();
+        }
 
         public IActionResult Index()
         {
