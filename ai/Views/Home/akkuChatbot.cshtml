@@ -1,6 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Akku Chatbot - பயிற்சி & சோதனை";
-    Layout = null; // complete standalone page, but using project theme
+    ViewData["Title"] = "Akku Chatbot - Model Studio";
+    Layout = null;
 }
 <!DOCTYPE html>
 <html lang="ta">
@@ -12,234 +12,277 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
     <style>
-        /* --- Theme variables (same as news-magazine.css) --- */
+        /* Theme (same as before) */
         :root {
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #334155;
-            --border-light: #e2e8f0;
-            --accent: #3b82f6;
+            --bg-body: #f8fafc; --bg-card: #ffffff; --text-primary: #0f172a;
+            --text-secondary: #334155; --border-light: #e2e8f0; --accent: #3b82f6;
             --accent-hover: #2563eb;
-            --font: 'Inter', system-ui, -apple-system, sans-serif;
         }
         .theme-dark {
-            --bg-body: #0b1120;
-            --bg-card: #111827;
-            --text-primary: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --border-light: #1e293b;
-            --accent: #60a5fa;
+            --bg-body: #0b1120; --bg-card: #111827; --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1; --border-light: #1e293b; --accent: #60a5fa;
             --accent-hover: #3b82f6;
         }
-
         * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: var(--font);
-            background: var(--bg-body);
-            color: var(--text-primary);
-            transition: background 0.2s, color 0.2s;
-            line-height: 1.5;
-            min-height: 100vh;
-        }
-        .app-bar {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-card);
-            border-bottom: 1px solid var(--border-light);
-            margin-bottom: 1.5rem;
-        }
-        .logo { font-weight: 700; font-size: 1.3rem; color: var(--text-primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        .icon-btn {
-            background: transparent; border: none; font-size: 1.4rem; cursor: pointer;
-            color: var(--text-secondary); padding: 0.25rem 0.5rem; border-radius: 8px;
-        }
-        .icon-btn:hover { background: var(--border-light); }
-        .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 2rem; }
-        .hero { text-align: center; margin-bottom: 2rem; }
-        .hero h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
-        .hero p { color: var(--text-secondary); margin-top: 0.25rem; }
-        .tabs { display: flex; gap: 0.6rem; margin-bottom: 1.5rem; }
-        .tab {
-            flex:1; padding: 0.7rem; border: none; background: var(--bg-card);
-            color: var(--text-primary); border-radius: 8px; font-weight: 600;
-            cursor: pointer; transition: 0.2s; text-align: center;
-            border: 1px solid var(--border-light);
-        }
-        .tab.active { background: var(--accent); color: white; border-color: var(--accent); }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-
-        textarea, input[type="text"], input[type="file"] {
-            width: 100%; padding: 0.7rem; margin: 0.5rem 0;
-            border: 1px solid var(--border-light); border-radius: 6px;
-            background: var(--bg-card); color: var(--text-primary); font-family: var(--font);
-        }
-        button {
-            padding: 0.65rem 1.5rem; background: var(--accent); color: white;
-            border: none; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 0.25rem;
-        }
-        button.secondary { background: var(--border-light); color: var(--text-primary); }
-        .status { font-size: 0.85rem; margin: 0.5rem 0; padding: 0.5rem; border-radius: 6px; }
-        .status.success { background: #d1fae5; color: #065f46; }
-        .status.error { background: #fee2e2; color: #991b1b; }
-
-        .chat-box {
-            border: 1px solid var(--border-light); border-radius: 8px;
-            height: 420px; overflow-y: auto; padding: 1rem; background: var(--bg-card);
-            margin-bottom: 0.75rem;
-        }
-        .message { display: flex; margin-bottom: 0.7rem; }
-        .message.user { justify-content: flex-end; }
-        .bubble {
-            max-width: 75%; padding: 0.6rem 1rem; border-radius: 12px; line-height: 1.5;
-            font-size: 0.95rem;
-        }
-        .user .bubble { background: var(--accent); color: white; }
-        .bot .bubble { background: var(--border-light); color: var(--text-primary); }
-        
-        /* back link */
-        .back-link { display: inline-block; margin-bottom: 1.5rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
-        .back-link:hover { text-decoration: underline; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-body); color: var(--text-primary); }
+        .app-bar { display:flex; justify-content:space-between; align-items:center; padding:0.75rem 1.5rem; background:var(--bg-card); border-bottom:1px solid var(--border-light); }
+        .logo { font-weight:700; font-size:1.3rem; color:var(--text-primary); text-decoration:none; } .logo span { color:var(--accent); }
+        .icon-btn { background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--text-secondary); }
+        .container { max-width:1200px; margin:0 auto; padding:1rem 1.5rem; }
+        .hero { text-align:center; margin-bottom:1.5rem; }
+        .hero h1 { font-size:2rem; }
+        .tabs { display:flex; gap:0.5rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+        .tab { flex:1; min-width:90px; padding:0.7rem; border:1px solid var(--border-light); background:var(--bg-card); color:var(--text-primary); border-radius:8px; cursor:pointer; font-weight:600; text-align:center; }
+        .tab.active { background:var(--accent); color:white; border-color:var(--accent); }
+        .tab-content { display:none; }
+        .tab-content.active { display:block; }
+        input, textarea, select { width:100%; padding:0.7rem; margin:0.5rem 0; border:1px solid var(--border-light); border-radius:6px; background:var(--bg-card); color:var(--text-primary); }
+        button { padding:0.65rem 1.2rem; background:var(--accent); color:white; border:none; border-radius:6px; cursor:pointer; font-weight:600; margin-right:0.5rem; }
+        button.secondary { background:var(--border-light); color:var(--text-primary); }
+        .card { background:var(--bg-card); border:1px solid var(--border-light); border-radius:12px; padding:1.5rem; margin-bottom:1.5rem; }
+        .stat { display:flex; justify-content:space-between; margin-bottom:0.5rem; }
+        .stat span:first-child { color:var(--text-secondary); }
+        .chat-box { height:400px; overflow-y:auto; padding:1rem; background:var(--bg-card); border:1px solid var(--border-light); border-radius:8px; margin-bottom:0.5rem; }
+        .message { display:flex; margin-bottom:0.7rem; }
+        .message.user { justify-content:flex-end; }
+        .bubble { max-width:70%; padding:0.6rem 1rem; border-radius:12px; font-size:0.95rem; }
+        .user .bubble { background:var(--accent); color:white; }
+        .bot .bubble { background:var(--border-light); color:var(--text-primary); }
+        .status { font-size:0.85rem; padding:0.5rem; border-radius:6px; margin:0.5rem 0; }
+        .status.success { background:#d1fae5; color:#065f46; }
+        .status.error { background:#fee2e2; color:#991b1b; }
+        .history-item { padding:0.5rem; border-bottom:1px solid var(--border-light); font-size:0.9rem; }
+        .back-link { display:inline-block; margin-bottom:1rem; color:var(--accent); text-decoration:none; }
     </style>
 </head>
 <body class="@(Context.Request.Cookies["akku-theme"] == "dark" ? "theme-dark" : "")">
     <div class="app-bar">
-        <a href="/" class="logo">Akku<span>AI</span> News</a>
+        <a href="/" class="logo">Akku<span>AI</span> Studio</a>
         <button id="themeToggle" class="icon-btn">🌓</button>
     </div>
     <div class="container">
         <a href="/" class="back-link">← முகப்புக்குத் திரும்பு</a>
         <div class="hero">
-            <h1>🤖 Akku Chatbot</h1>
-            <p>Flask API + Ollama + RAG — பயிற்சி மற்றும் மேம்பாட்டு இடைமுகம்</p>
+            <h1>🤖 Akku Model Studio</h1>
+            <p>Flask API + Ollama + RAG — பயிற்சி, மேம்பாடு & Model மேலாண்மை</p>
         </div>
 
         <div class="tabs">
-            <button class="tab active" data-tab="train">📚 பயிற்சி</button>
-            <button class="tab" data-tab="pdf">📄 PDF இறக்குமதி</button>
+            <button class="tab active" data-tab="stats">📊 Stats & History</button>
+            <button class="tab" data-tab="models">🗂️ Model Manager</button>
+            <button class="tab" data-tab="train">📚 பயிற்சி</button>
             <button class="tab" data-tab="chat">💬 சாட்</button>
+            <button class="tab" data-tab="pdf">📄 PDF இறக்குமதி</button>
         </div>
 
-        <!-- பயிற்சி தாவல் -->
-        <div id="tab-train" class="tab-content active">
+        <!-- Stats & History Tab -->
+        <div id="tab-stats" class="tab-content active">
+            <div class="card">
+                <h3>📊 Current Model Statistics</h3>
+                <div id="statsContainer">Loading...</div>
+            </div>
+            <div class="card">
+                <h3>📝 Recent Updates History</h3>
+                <div id="historyContainer">Loading...</div>
+            </div>
+        </div>
+
+        <!-- Model Manager Tab -->
+        <div id="tab-models" class="tab-content">
+            <div class="card">
+                <h3>🗂️ Collection Manager (Knowledge Bases)</h3>
+                <div id="modelList"></div>
+                <hr style="margin:1rem 0; border-color:var(--border-light);">
+                <h4>Create New Collection</h4>
+                <input type="text" id="newModelName" placeholder="Collection Name (e.g., akku_support_v2)" />
+                <button onclick="createCollection()">Create</button>
+                <div id="modelMsg" class="status"></div>
+            </div>
+        </div>
+
+        <!-- Training Tab (Q&A add) -->
+        <div id="tab-train" class="tab-content">
             <div id="trainStatus"></div>
-            <input type="text" id="qInput" placeholder="கேள்வி (Question)" />
-            <textarea id="aInput" rows="3" placeholder="பதில் (Answer)"></textarea>
+            <input type="text" id="qInput" placeholder="கேள்வி" />
+            <textarea id="aInput" rows="3" placeholder="பதில்"></textarea>
             <button onclick="addQA()">சேமி</button>
         </div>
 
-        <!-- PDF இறக்குமதி தாவல் -->
+        <!-- Chat Tab -->
+        <div id="tab-chat" class="tab-content">
+            <div class="chat-box" id="chatBox"></div>
+            <div style="display:flex; gap:0.5rem;">
+                <input type="text" id="chatInput" placeholder="செய்தி..." style="flex:1;" />
+                <button onclick="sendMessage()">அனுப்பு</button>
+            </div>
+        </div>
+
+        <!-- PDF Import Tab (unchanged) -->
         <div id="tab-pdf" class="tab-content">
             <div id="pdfStatus"></div>
             <input type="file" id="pdfFile" accept=".pdf" />
             <button onclick="uploadPDF()">பதிவேற்றி Q&A பிரித்தெடு</button>
         </div>
-
-        <!-- சாட் தாவல் -->
-        <div id="tab-chat" class="tab-content">
-            <div class="chat-box" id="chatBox"></div>
-            <div style="display:flex; gap:0.5rem;">
-                <input type="text" id="chatInput" placeholder="உங்கள் செய்தி..." style="flex:1;" />
-                <button onclick="sendMessage()">அனுப்பு</button>
-            </div>
-        </div>
     </div>
 
     <script>
-        const API_BASE = "http://127.0.0.1:5000";
-        // Theme toggle (simple, can be enhanced)
-        const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('theme-dark');
-                // optionally save to cookie/localStorage
-                const isDark = document.body.classList.contains('theme-dark');
-                document.cookie = `akku-theme=${isDark ? 'dark' : 'light'};path=/;max-age=86400`;
-            });
-        }
+        const API_BASE = "http://localhost:5000";
+        let activeCollection = "akku_knowledge"; // default
 
-        // Tabs
+        // Theme toggle
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('theme-dark');
+            document.cookie = `akku-theme=${document.body.classList.contains('theme-dark')?'dark':'light'};path=/`;
+        });
+
+        // Tab switching
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 const target = tab.getAttribute('data-tab');
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                document.getElementById('tab-' + target).classList.add('active');
+                document.getElementById('tab-'+target).classList.add('active');
+                if (target === 'stats') loadStatsAndHistory();
+                if (target === 'models') loadCollections();
             });
         });
 
-        // Add QA
+        // ---------- Stats & History ----------
+        async function loadStatsAndHistory() {
+            try {
+                const res = await fetch(`${API_BASE}/admin/stats?collection=${activeCollection}`);
+                const data = await res.json();
+                document.getElementById('statsContainer').innerHTML = `
+                    <div class="stat"><span>Active Collection:</span><strong>${data.collection_name}</strong></div>
+                    <div class="stat"><span>Total Documents:</span><strong>${data.document_count}</strong></div>
+                    <div class="stat"><span>Estimated Size:</span><strong>${data.estimated_size_kb} KB</strong></div>
+                    <div class="stat"><span>Embedding Model:</span><strong>${data.embedding_model}</strong></div>
+                `;
+                // Fetch history
+                const histRes = await fetch(`${API_BASE}/admin/history?collection=${activeCollection}`);
+                const histData = await histRes.json();
+                const historyDiv = document.getElementById('historyContainer');
+                if (histData.history && histData.history.length > 0) {
+                    historyDiv.innerHTML = histData.history.map(h => `<div class="history-item">[${h.timestamp}] ${h.action}: ${h.detail}</div>`).join('');
+                } else {
+                    historyDiv.innerHTML = '<p>No updates yet.</p>';
+                }
+            } catch(e) {
+                document.getElementById('statsContainer').innerHTML = '<p class="status error">Failed to load stats.</p>';
+            }
+        }
+
+        // ---------- Model Manager ----------
+        async function loadCollections() {
+            try {
+                const res = await fetch(`${API_BASE}/admin/collections`);
+                const data = await res.json();
+                const list = document.getElementById('modelList');
+                if (data.collections && data.collections.length>0) {
+                    list.innerHTML = '<ul>' + data.collections.map(c => 
+                        `<li style="margin:0.5rem 0; display:flex; justify-content:space-between; align-items:center;">
+                            <span><strong>${c.name}</strong> (${c.count} docs)</span>
+                            <span>
+                                <button class="secondary" onclick="loadCollection('${c.name}')">Load</button>
+                                <button class="secondary" onclick="deleteCollection('${c.name}')">Delete</button>
+                            </span>
+                        </li>`
+                    ).join('') + '</ul>';
+                } else {
+                    list.innerHTML = '<p>No collections yet. Create one below.</p>';
+                }
+            } catch(e) {
+                document.getElementById('modelList').innerHTML = '<p class="status error">Error loading collections.</p>';
+            }
+        }
+
+        async function createCollection() {
+            const name = document.getElementById('newModelName').value.trim();
+            if (!name) { document.getElementById('modelMsg').innerHTML = '<div class="status error">Name required.</div>'; return; }
+            try {
+                const res = await fetch(`${API_BASE}/admin/create-collection`, {
+                    method: 'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({name})
+                });
+                const data = await res.json();
+                document.getElementById('modelMsg').innerHTML = data.status === 'success' ? 
+                    '<div class="status success">✅ '+data.message+'</div>' : 
+                    '<div class="status error">❌ '+data.message+'</div>';
+                if (data.status === 'success') { loadCollections(); document.getElementById('newModelName').value = ''; }
+            } catch(e) {
+                document.getElementById('modelMsg').innerHTML = '<div class="status error">Failed.</div>';
+            }
+        }
+
+        async function loadCollection(name) {
+            try {
+                const res = await fetch(`${API_BASE}/admin/load-collection`, {
+                    method: 'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({name})
+                });
+                const data = await res.json();
+                if (data.status === 'success') {
+                    activeCollection = name;
+                    alert('Loaded collection: ' + name);
+                    loadStatsAndHistory();
+                }
+            } catch(e) {}
+        }
+
+        async function deleteCollection(name) {
+            if (!confirm('Delete collection '+name+'? This cannot be undone.')) return;
+            try {
+                const res = await fetch(`${API_BASE}/admin/delete-collection`, {
+                    method: 'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({name})
+                });
+                const data = await res.json();
+                if (data.status === 'success') loadCollections();
+            } catch(e) {}
+        }
+
+        // ---------- Training (add QA) ----------
         async function addQA() {
             const q = document.getElementById('qInput').value.trim();
             const a = document.getElementById('aInput').value.trim();
             const status = document.getElementById('trainStatus');
-            if(!q || !a) { status.innerHTML = '<div class="status error">கேள்வி மற்றும் பதில் தேவை.</div>'; return; }
-            status.innerHTML = '<div class="status">சேமிக்கப்படுகிறது...</div>';
+            if (!q||!a) { status.innerHTML='<div class="status error">கேள்வி மற்றும் பதில் தேவை.</div>'; return; }
+            status.innerHTML='<div class="status">சேமிக்கப்படுகிறது...</div>';
             try {
                 const res = await fetch(`${API_BASE}/admin/add`, {
-                    method: 'POST',
-                    headers: {'Content-Type':'application/json'},
-                    body: JSON.stringify({question: q, answer: a})
+                    method:'POST',
+                    headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify({question:q, answer:a, collection:activeCollection})
                 });
                 const data = await res.json();
-                if(res.ok) {
-                    status.innerHTML = '<div class="status success">✅ '+data.message+'</div>';
-                    document.getElementById('qInput').value = '';
-                    document.getElementById('aInput').value = '';
-                } else {
-                    status.innerHTML = '<div class="status error">❌ '+(data.message||'பிழை')+'</div>';
-                }
-            } catch (e) {
-                status.innerHTML = '<div class="status error">❌ API உடன் இணைப்புத் தோல்வி.</div>';
-            }
-        }
-
-        // Upload PDF
-        async function uploadPDF() {
-            const fileInput = document.getElementById('pdfFile');
-            const status = document.getElementById('pdfStatus');
-            if(!fileInput.files.length) {
-                status.innerHTML = '<div class="status error">PDF கோப்பைத் தேர்வு செய்யவும்.</div>';
-                return;
-            }
-            status.innerHTML = '<div class="status">PDF பகுக்கப்படுகிறது...</div>';
-            const formData = new FormData();
-            formData.append('file', fileInput.files[0]);
-            try {
-                const res = await fetch(`${API_BASE}/admin/import-pdf`, {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await res.json();
-                if(res.ok) {
-                    status.innerHTML = `<div class="status success">✅ ${data.message} (சேர்க்கப்பட்ட ஜோடிகள்: ${data.count})</div>`;
-                } else {
-                    status.innerHTML = '<div class="status error">❌ '+(data.error||'பிழை')+'</div>';
-                }
+                status.innerHTML = data.status==='success'? 
+                    '<div class="status success">✅ '+data.message+'</div>' : 
+                    '<div class="status error">❌ '+(data.message||'Error')+'</div>';
+                if(data.status==='success'){ document.getElementById('qInput').value=''; document.getElementById('aInput').value=''; }
             } catch(e) {
-                status.innerHTML = '<div class="status error">❌ பதிவேற்றம் தோல்வி.</div>';
+                status.innerHTML='<div class="status error">❌ API இணைப்புத் தோல்வி.</div>';
             }
         }
 
-        // Chat
+        // ---------- Chat ----------
         async function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const msg = input.value.trim();
+            const msg = document.getElementById('chatInput').value.trim();
             if(!msg) return;
             appendMessage('user', msg);
-            input.value = '';
+            document.getElementById('chatInput').value='';
             appendMessage('bot', '...');
             try {
                 const res = await fetch(`${API_BASE}/api/chat`, {
-                    method: 'POST',
-                    headers: {'Content-Type':'application/json'},
-                    body: JSON.stringify({message: msg})
+                    method:'POST',
+                    headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify({message:msg, collection:activeCollection})
                 });
                 const data = await res.json();
-                updateLastBotMessage(data.reply || 'பதில் இல்லை.');
+                updateLastBotMessage(data.reply || 'No reply.');
             } catch(e) {
                 updateLastBotMessage('❌ API பிழை');
             }
@@ -248,8 +291,8 @@
         function appendMessage(role, text) {
             const box = document.getElementById('chatBox');
             const div = document.createElement('div');
-            div.className = `message ${role}`;
-            div.innerHTML = `<div class="bubble">${text}</div>`;
+            div.className = 'message '+role;
+            div.innerHTML = '<div class="bubble">'+text+'</div>';
             box.appendChild(div);
             box.scrollTop = box.scrollHeight;
         }
@@ -257,6 +300,28 @@
             const bubbles = document.querySelectorAll('#chatBox .message.bot .bubble');
             if(bubbles.length) bubbles[bubbles.length-1].textContent = text;
         }
+
+        // PDF upload (unchanged)
+        async function uploadPDF() {
+            const file = document.getElementById('pdfFile').files[0];
+            const status = document.getElementById('pdfStatus');
+            if(!file) { status.innerHTML='<div class="status error">PDF select செய்யவும்.</div>'; return; }
+            status.innerHTML='<div class="status">Processing...</div>';
+            const formData = new FormData(); formData.append('file', file);
+            formData.append('collection', activeCollection);
+            try {
+                const res = await fetch(`${API_BASE}/admin/import-pdf`, { method:'POST', body:formData });
+                const data = await res.json();
+                status.innerHTML = data.status==='success'? 
+                    `<div class="status success">✅ ${data.message} (${data.count} pairs)</div>` :
+                    `<div class="status error">❌ ${data.error||'Error'}</div>`;
+            } catch(e) {
+                status.innerHTML='<div class="status error">❌ Upload failed.</div>';
+            }
+        }
+
+        // Initial load
+        loadStatsAndHistory();
     </script>
 </body>
 </html>
