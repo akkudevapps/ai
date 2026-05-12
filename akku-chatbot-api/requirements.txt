@@ -1,7 +1,5 @@
-flask
+﻿flask
 flask-cors
-langchain
-langchain-community
 chromadb
 openai
 sentence-transformers

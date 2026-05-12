@@ -1,0 +1,110 @@
+{"timestamp": "2026-05-12 22:18:19", "action": "chat", "detail": "waat about akkuapps.in ?", "collection": "langchain"}
+{"timestamp": "2026-05-12 22:18:30", "action": "chat", "detail": "who are you ?", "collection": "langchain"}
+{"timestamp": "2026-05-12 22:19:26", "action": "add_qa", "detail": "who are you ?", "collection": "langchain"}
+{"timestamp": "2026-05-12 22:19:37", "action": "chat", "detail": "who are you ?", "collection": "langchain"}
+{"timestamp": "2026-05-12 22:20:05", "action": "create_collection", "detail": "Thirukural", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:21:25", "action": "add_qa", "detail": "Thirukkural (திருக்குறள்)", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:22:44", "action": "add_qa", "detail": "Explore Thiruvalluvar's life", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:23:26", "action": "add_qa", "detail": "Explore Thirukkural's ethical themes", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:25:12", "action": "add_qa", "detail": "Explore Thirukkural's list", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:29:03", "action": "add_qa", "detail": "Thirukkural in Tamil & English : Chapter 1 : Invocation", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:29:30", "action": "chat", "detail": "திருக்குறள் முதல் பாடல் ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:29:55", "action": "chat", "detail": "திருக்குறள் பாடல் 10 ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 22:31:55", "action": "add_qa", "detail": "Thirukkural in Tamil &  English : Chapter 2 : Glory of rain", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:41:18", "action": "chat", "detail": "in thirukural how many poems ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:42:28", "action": "chat", "detail": "Thirukural  poem numer 10 , in tamil plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:42:49", "action": "chat", "detail": "Thirukural poem numer 100 , in tamil plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:44:12", "action": "add_qa", "detail": "Thirukkural in Tamil &  English : Chapter 3 : Glory of those who have relinquish", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:44:57", "action": "add_qa", "detail": "Thirukkural in Tamil &  English : Chapter 10 : Speaking pleasantly", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:45:13", "action": "chat", "detail": "Thirukural poem numer 100 , in tamil plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:45:28", "action": "chat", "detail": "Thirukural poem numer 100 , in tamil plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:45:47", "action": "chat", "detail": "Thirukural poem numer 12 , in tamil plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:45:57", "action": "chat", "detail": "Thirukural poem numer  , in tamil plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:46:33", "action": "chat", "detail": "kural number 15 plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:46:53", "action": "chat", "detail": "kural number 01  plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:47:15", "action": "chat", "detail": "kural number 100 plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:47:27", "action": "chat", "detail": "kural number 10 plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:48:23", "action": "chat", "detail": "Chapter 3 : kural number 26 plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:48:59", "action": "chat", "detail": "Chapter 10 : kural number 100 plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:49:31", "action": "chat", "detail": "Chapter 10 : kural number 92 plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-12 23:50:38", "action": "chat", "detail": "Chapter 10 : kural number 100 plz", "collection": "langchain"}
+{"timestamp": "2026-05-12 23:50:48", "action": "chat", "detail": "what about akku games ?", "collection": "langchain"}
+{"timestamp": "2026-05-13 02:32:15", "action": "add_qa", "detail": "Thirukkural in Tamil &  English : Chapter 4 : The power of righteousness", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:32:46", "action": "add_qa", "detail": "Thirukkural in Tamil &  English : Chapter 5 : Family life", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:34:08", "action": "add_qa", "detail": "Thirukkural Kural in Tamil &  English : Chapter 6 : A good life partner", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:47:50", "action": "add_qa", "detail": "திருக்குறள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:48:27", "action": "add_qa", "detail": "திருவள்ளுவர் அருளிய திருக்குறள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:53:22", "action": "add_qa", "detail": "அறிமுகம் - திருக்குறள", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:54:23", "action": "add_qa", "detail": "திருவள்ளுவர் சிலை", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:54:55", "action": "add_qa", "detail": "அறிமுகம் - திருவள்ளுவர", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:55:47", "action": "add_qa", "detail": "அறத்துப்பால்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:56:17", "action": "add_qa", "detail": "ெபாருட்பால்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:56:51", "action": "add_qa", "detail": "இன்பத்துப்பால்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 02:59:35", "action": "add_qa", "detail": "திருவள்ளுவரின் திருக்குறள் : அறத்துப்பால்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:04:54", "action": "add_qa", "detail": "திருவள்ளுவரின் திருக்குறள் : பொருட்பால்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:06:13", "action": "add_qa", "detail": "திருவள்ளுவரின் திருக்குறள் : இன்பத்துப்பால்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:06:57", "action": "chat", "detail": "திருக்குறள் எத்ளை குறள்கள் உள்ளன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:08:04", "action": "add_qa", "detail": "திருக்குறள் எத்தளை குறள்கள் உள்ளன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:08:45", "action": "add_qa", "detail": "திருக்குறளின் அதிகாரங்கள் பற்றி", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:09:21", "action": "add_qa", "detail": "அறத்துப்பால் அதிகாரங்கள் விளக்கம்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:09:55", "action": "add_qa", "detail": "பொருட்பால் அரசியல் அதிகாரங்கள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:09:55", "action": "add_qa", "detail": "பொருட்பால் அரசியல் அதிகாரங்கள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:10:38", "action": "add_qa", "detail": "காமத்துப்பால் அதிகாரங்கள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:11:39", "action": "add_qa", "detail": "திருக்குறள் முக்கியத்துவம்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:11:49", "action": "chat", "detail": "திருக்குறள் எத்ளை குறள்கள் உள்ளன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:12:34", "action": "add_qa", "detail": "திருவள்ளுவர் வாழ்க்கை வரலாறு", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:12:34", "action": "add_qa", "detail": "திருவள்ளுவர் வாழ்க்கை வரலாறு", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:13:08", "action": "add_qa", "detail": "திருக்குறள் மொழிபெயர்ப்புகள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:13:46", "action": "add_qa", "detail": "திருக்குறள் பதிப்புகள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:14:50", "action": "add_qa", "detail": "திருக்குறள் ஓலைச்சுவடுகள்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:16:30", "action": "chat", "detail": "திருக்குறள் : Kural 1280 வது குறளை கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:17:18", "action": "chat", "detail": "இன்பத்துப்பால்  1312 வது குறள் ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:18:07", "action": "add_qa", "detail": "4. அறன் வலியுறுத்தல்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:18:23", "action": "chat", "detail": "அறன் வலியுறுத்தல் 40 வது பாடல்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:19:00", "action": "import_pdf", "detail": "013.thirukuralputhiyaurai.pdf → 0 chunks", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:19:31", "action": "chat", "detail": "வான் சிறப்பு 20 வது பாடல்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:20:00", "action": "add_qa", "detail": "வான் சிறப்பு", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:20:10", "action": "chat", "detail": "வான் சிறப்பு 20 வது பாடல்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:20:21", "action": "chat", "detail": "வான் சிறப்பு 20 வது பாடல் ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:20:47", "action": "chat", "detail": "வான் சிறப்பு 20 th kural", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:22:02", "action": "add_qa", "detail": "திருக்குறள் திருக்குறள் புதிய உரை", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:22:29", "action": "chat", "detail": "வான் சிறப்பு 20 வது குறள் கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:22:51", "action": "chat", "detail": "திருக்குறள் 20 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:23:14", "action": "chat", "detail": "அறன் வலியுறுத்தல் 44 வது பாடல்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:24:09", "action": "chat", "detail": "திருக்குறள் 1080 வது குறளை கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:24:23", "action": "chat", "detail": "திருக்குறள் 80 வது குறளை கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:24:32", "action": "chat", "detail": "திருக்குறள் 10 வது குறளை கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:25:01", "action": "chat", "detail": "திருக்குறள்  புலவி நுணுக்கம் பற்றி கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:25:25", "action": "chat", "detail": "அகரம் முதல, எழுத்து எல்லாம்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:25:38", "action": "chat", "detail": "அகரம் முதல, எழுத்து எல்லாம்", "collection": "langchain"}
+{"timestamp": "2026-05-13 03:26:03", "action": "chat", "detail": "திருக்குறள் பற்றி கூறவும்", "collection": "langchain"}
+{"timestamp": "2026-05-13 03:26:16", "action": "chat", "detail": "திருக்குறள் பற்றி கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:26:48", "action": "chat", "detail": "திருக்குறள் 10 வது அதிகாரம் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:27:30", "action": "chat", "detail": "திருக்குறள் அறத்துப்பால் ல் என்ன கருத்துக்கள் உள்ளன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:27:56", "action": "chat", "detail": "திருக்குறள் அறத்துப்பால் 50 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:30:00", "action": "add_qa", "detail": "Full text of \"திருக்குறள் எளிய உரை\"", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:30:16", "action": "chat", "detail": "திருக்குறள் அறத்துப்பால் 50 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:30:25", "action": "chat", "detail": "திருக்குறள் அறத்துப்பால் 50 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:30:34", "action": "chat", "detail": "திருக்குறள் 50 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:31:37", "action": "chat", "detail": "திருக்குறள் 581 வது Kural", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:33:27", "action": "chat", "detail": "திருக்குறள்  ஓலைச்சுவடி பற்றி கூறவும்", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:33:41", "action": "chat", "detail": "ஓலைச்சுவடி", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:33:55", "action": "add_qa", "detail": "ஓலைச்சுவடி", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:34:05", "action": "chat", "detail": "ஓலைச்சுவடி", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:34:21", "action": "chat", "detail": "ஓலைச்சுவடி", "collection": "langchain"}
+{"timestamp": "2026-05-13 03:34:50", "action": "chat", "detail": "திருக்குறள் விளக்குக", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:35:16", "action": "chat", "detail": "திருக்குறள் 15 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:35:32", "action": "chat", "detail": "திருக்குறள் 40 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:35:44", "action": "chat", "detail": "திருக்குறள் 55 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:36:34", "action": "chat", "detail": "திருக்குறள்  Chapter 6:  55 வது குறள் என்ன ?", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:38:50", "action": "chat", "detail": "Chapter 6 : A good life partner 56 th kural plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:40:06", "action": "chat", "detail": "Chapter 9 : 85 th kural plz", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:41:09", "action": "add_qa", "detail": "Thirukkural Kural in Tamil &  English : Chapter 7 : The boon of children", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 03:42:57", "action": "add_qa", "detail": "Chapter 108: Vileness", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:03:08", "action": "add_qa", "detail": "Chapter 107: The fear of seeking alms", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:03:30", "action": "add_qa", "detail": "Chapter 106. Seeking Alms – A Satire*", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:03:51", "action": "add_qa", "detail": "Chapter 105: Poverty", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:08:09", "action": "add_qa", "detail": "Chapter 104: Farming", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:08:28", "action": "add_qa", "detail": "Chapter 103. Serving (the/one’s) people", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:08:47", "action": "add_qa", "detail": "Chapter 102: Compunction", "collection": "Thirukural"}
+{"timestamp": "2026-05-13 04:11:22", "action": "add_qa", "detail": "Chapter 101: Non-beneficial Wealth", "collection": "Thirukural"}
