@@ -2,4 +2,8 @@
 flask-cors
 chromadb
 openai
+<<<<<<< HEAD
 sentence-transformers
+=======
+sentence-transformers
+>>>>>>> 4656581589201f3fb0c9635f8bccd4b5ca1d0807
